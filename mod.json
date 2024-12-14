@@ -8,7 +8,7 @@
 	},
 	"id": "alphalaneous.mark_as_unread",
 	"name": "Mark as Unread",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"developer": "Alphalaneous",
 	"description": "Mark messages and Friend Requests as unread",
 	"links": {
