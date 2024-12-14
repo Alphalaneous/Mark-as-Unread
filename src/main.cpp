@@ -3,8 +3,32 @@
 #include <Geode/modify/GJMessagePopup.hpp>
 #include <Geode/modify/GJRequestCell.hpp>
 #include <Geode/modify/FriendRequestPopup.hpp>
+#include <Geode/modify/ProfilePage.hpp>
 
 using namespace geode::prelude;
+
+class $modify(ProfilePage) {
+
+    void loadPageFromUserInfo(GJUserScore* p0) {
+		matjson::Value friendValues = Mod::get()->getSaveContainer();
+		int count = 0;
+		for (matjson::Value value : friendValues) {
+			if(utils::string::startsWith(value.getKey().value_or(""), "unread-friend-")) {
+				if (value.asBool().unwrapOr(false)) {
+					count++;
+				}
+			}
+		}
+
+		int originalCount = p0->m_friendReqCount;
+		p0->m_friendReqCount += count;
+
+		ProfilePage::loadPageFromUserInfo(p0);
+		p0->m_friendReqCount = originalCount;
+
+	}
+
+};
 
 class $modify(GJRequestCell) {
 
