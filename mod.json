@@ -1,5 +1,5 @@
 {
-	"geode": "4.0.1",
+	"geode": "4.2.0",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
@@ -8,12 +8,15 @@
 	},
 	"id": "alphalaneous.mark_as_unread",
 	"name": "Mark as Unread",
-	"version": "v1.0.1",
+	"version": "v1.0.2",
 	"developer": "Alphalaneous",
 	"description": "Mark messages and Friend Requests as unread",
 	"links": {
         "homepage": "https://linktr.ee/Alphalaneous",
         "source": "https://github.com/Alphalaneous/Mark-as-Unread",
         "community": "https://discord.gg/Txn2CA5dHF"
-    }
+    },
+	"tags": [
+		"utility"
+	]
 }
